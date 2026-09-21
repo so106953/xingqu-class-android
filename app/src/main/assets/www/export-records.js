@@ -5,7 +5,7 @@ const courseColors=['FFF1F7','EAF6FF','FFF8DD','ECF9F1','F2EDFF','FFF0E7','EAF7F
 const cellBorder={top:{style:'thin',color:{rgb:'C9D9E8'}},bottom:{style:'thin',color:{rgb:'C9D9E8'}},left:{style:'thin',color:{rgb:'C9D9E8'}},right:{style:'thin',color:{rgb:'C9D9E8'}}}
 function exportRecords(){
   if(!window.XLSX){notify('Excel 导出组件尚未加载，请刷新页面后重试');return}
-  const generatedAt=new Date(),rows=[]
+  const profile=profiles.find(p=>p.id===activeProfileId),childName=profile?.name||'孩子',generatedAt=new Date(),rows=[]
   courses.forEach(course=>{
     const summary=summarize(course,generatedAt)
     const counts={total:summary.total,used:summary.completed,remaining:summary.remaining}
@@ -26,10 +26,10 @@ function exportRecords(){
     const rowStyle={fill:{patternType:'solid',fgColor:{rgb:colorByCourse.get(row.name)}},font:{color:{rgb:'1F3D5C'}},alignment:{vertical:'center'},border:cellBorder}
     for(let column=0;column<header.length;column++){const ref=XLSX.utils.encode_cell({r:index+1,c:column});worksheet[ref].s=rowStyle}
   })
-  const overview=XLSX.utils.aoa_to_sheet([['兴趣课时记录'],['导出时间',generatedAt.toLocaleString('zh-CN')],[],['颜色说明','同一课程使用同一种浅色填充，方便快速区分。'],['说明','请假记录不扣课；已上记录扣 1 节。']])
+  const overview=XLSX.utils.aoa_to_sheet([[`${childName}的兴趣课时记录`],['孩子姓名',childName],['导出时间',generatedAt.toLocaleString('zh-CN')],[],['颜色说明','同一课程使用同一种浅色填充，方便快速区分。'],['说明','请假记录不扣课；已上记录扣 1 节。']])
   overview['!cols']=[{wch:16},{wch:48}]
   overview.A1.s={fill:{patternType:'solid',fgColor:{rgb:'2D5E8C'}},font:{bold:true,color:{rgb:'FFFFFF',sz:14}},alignment:{horizontal:'center'},border:cellBorder}
-  ;['A2','B2','A4','B4','A5','B5'].forEach(ref=>overview[ref].s={border:cellBorder,fill:{patternType:'solid',fgColor:{rgb:'EDF6FC'}}})
+  ;['A2','B2','A3','B3','A5','B5','A6','B6'].forEach(ref=>overview[ref].s={border:cellBorder,fill:{patternType:'solid',fgColor:{rgb:'EDF6FC'}}})
   const summaryHeader=['课程大类','课程分类','课程名称','总课时','已上课时','请假次数','补课次数','调课次数','剩余课时','每周上课日','上课时间','自动统计开始日期','下次课程']
   const summaryRows=courses.map(course=>{const item=summarize(course,generatedAt),leaves=item.records.filter(r=>r.skipped&&!r.source).length,manual=course.manualRecords||[],makeups=manual.filter(r=>r.type==='补课').length,reschedules=manual.filter(r=>r.type==='调课').length;return [courseGroup(course),courseType(course),course.name,item.total,item.completed,leaves,makeups,reschedules,item.remaining,'星期'+item.weekdayLabel,course.startTime+'–'+course.endTime,course.startDate,item.next?item.next.date:'本期已完成']})
   const summarySheet=XLSX.utils.aoa_to_sheet([summaryHeader,...summaryRows])
@@ -41,7 +41,7 @@ function exportRecords(){
   XLSX.utils.book_append_sheet(workbook,overview,'导出说明')
   XLSX.utils.book_append_sheet(workbook,summarySheet,'课程汇总')
   XLSX.utils.book_append_sheet(workbook,worksheet,'上课记录')
-  XLSX.writeFile(workbook,`兴趣课时记录_${dateKey(generatedAt)}.xlsx`,{compression:true})
+  XLSX.writeFile(workbook,`${childName}_兴趣课时记录_${dateKey(generatedAt)}.xlsx`,{compression:true})
   notify('标准 Excel 表格已导出')
 }
 const exportButton=document.createElement('button')
