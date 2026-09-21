@@ -1,0 +1,97 @@
+[
+  {
+    "name": "羽毛球",
+    "file": "badminton.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Badminton/3D/badminton_3d.png"
+  },
+  {
+    "name": "乒乓球",
+    "file": "pingpong.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Ping pong/3D/ping_pong_3d.png"
+  },
+  {
+    "name": "足球",
+    "file": "football.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Soccer ball/3D/soccer_ball_3d.png"
+  },
+  {
+    "name": "网球",
+    "file": "tennis.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Tennis/3D/tennis_3d.png"
+  },
+  {
+    "name": "游泳",
+    "file": "swimming.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Person swimming/Default/3D/person_swimming_3d_default.png"
+  },
+  {
+    "name": "绘画",
+    "file": "painting.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Artist palette/3D/artist_palette_3d.png"
+  },
+  {
+    "name": "钢琴",
+    "file": "piano.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Musical keyboard/3D/musical_keyboard_3d.png"
+  },
+  {
+    "name": "吉他",
+    "file": "guitar.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Guitar/3D/guitar_3d.png"
+  },
+  {
+    "name": "小提琴",
+    "file": "violin.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Violin/3D/violin_3d.png"
+  },
+  {
+    "name": "舞蹈",
+    "file": "dance.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Ballet shoes/3D/ballet_shoes_3d.png"
+  },
+  {
+    "name": "武术",
+    "file": "martial.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Martial arts uniform/3D/martial_arts_uniform_3d.png"
+  },
+  {
+    "name": "编程",
+    "file": "robot.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Robot/3D/robot_3d.png"
+  },
+  {
+    "name": "棋类",
+    "file": "chess.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Chess pawn/3D/chess_pawn_3d.png"
+  },
+  {
+    "name": "数学",
+    "file": "math.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Abacus/3D/abacus_3d.png"
+  },
+  {
+    "name": "声乐",
+    "file": "singing.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Microphone/3D/microphone_3d.png"
+  },
+  {
+    "name": "阅读",
+    "file": "reading.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Open book/3D/open_book_3d.png"
+  },
+  {
+    "name": "轮滑",
+    "file": "skating.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Roller skate/3D/roller_skate_3d.png"
+  },
+  {
+    "name": "书法",
+    "file": "writing.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Writing hand/Default/3D/writing_hand_3d_default.png"
+  },
+  {
+    "name": "其他兴趣",
+    "file": "other.png",
+    "source": "https://github.com/microsoft/fluentui-emoji/blob/main/assets/Graduation cap/3D/graduation_cap_3d.png"
+  }
+]

@@ -1,0 +1,29 @@
+# Android and Gradle build outputs
+.gradle/
+.kotlin/
+build/
+**/build/
+
+# Local machine configuration and crash/debug logs
+local.properties
+*.log
+hs_err_pid*.log
+replay_pid*.log
+current-daemon.txt
+build-attempt.log
+gradle-out.log
+gradle-err.log
+
+# Generated APK packages are published through the website release channel.
+*.apk
+*.aab
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Keystores and signing credentials
+*.jks
+*.keystore
+key.properties

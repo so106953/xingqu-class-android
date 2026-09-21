@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>兴趣课时本 · 成长探险队</title>
+  <link rel="stylesheet" href="assets/font.css"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="adventure.css">
+  <style>.lesson-reminders{margin:0 0 22px;padding:16px 18px;border:1px solid #cfe5f3;border-radius:19px;background:#f7fcffdd}.lesson-reminders h2{margin:0 0 10px;font-size:16px;color:#254b75}.reminder-list{display:flex;flex-wrap:wrap;gap:9px}.reminder-item{flex:1 1 190px;padding:10px 12px;border-radius:13px;background:#fff6c8;color:#36516f;font-size:13px}.reminder-item b{color:#163c67}.reminder-empty{margin:0;color:#6f87a0;font-size:13px}</style>
+</head>
+<body><div class="adventure-page"><header><div class="brand">兴趣课时本</div><span class="local">本机保存</span></header>
+<main><section class="intro"><h1>每天，<span>一起长本领！</span></h1><p>每一种兴趣，都是新的探险！</p></section>
+<section id="summary" class="summary" aria-label="课时概览"></section>
+<section id="lesson-reminders" class="lesson-reminders" aria-label="上课提醒"></section>
+<div class="course-toolbar"><span id="course-count"></span><div><button id="archive-list" class="archive-link" hidden>上一页</button><button id="next-page" class="archive-link" hidden>下一页</button><button id="add-course" class="add-course">添加兴趣班</button></div></div>
+<section id="courses" class="courses" aria-label="兴趣课程"></section><section class="data-tools" aria-label="数据备份"><div><b>数据备份</b><small>换手机前先备份，恢复后会覆盖当前课程。</small></div><button id="backup-data" type="button">备份数据</button><label class="restore-data">恢复数据<input id="restore-data" type="file" accept="application/json,.json"></label></section>
+<footer>课程结束后自动扣除 1 节，请假不扣课。数据仅保存在当前浏览器。<br><span>首次使用，请在设置中确认开始日期及此前已上课时。</span><small class="app-credit">作者：猪猪 · 版本 1.0.0</small></footer>
+</main></div><dialog id="dialog" aria-labelledby="dialog-title"><div id="dialog-content"></div></dialog><div id="toast" role="status"></div>
+<script src="schedule.js"></script><script src="catalog.js"></script><script src="app.js"></script><script src="course-manager.js"></script><script src="xlsx.full.min.js"></script><script src="export-records.js"></script><script src="backup.js"></script></body></html>
